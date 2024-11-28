@@ -159,10 +159,16 @@ class Ui_Dialog(object):
         self.suhu_kanan.setObjectName("suhu_kanan")
         self.suhu_kanan.addItem("")
         self.suhu_kanan.addItem("")
+        self.tombol_home = QtWidgets.QPushButton(self.page_suhu)
+        self.tombol_home.setGeometry(QtCore.QRect(380, 10, 93, 28))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.tombol_home.setFont(font)
+        self.tombol_home.setObjectName("tombol_home")
         self.stackedWidget.addWidget(self.page_suhu)
 
         self.retranslateUi(Dialog)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -194,13 +200,4 @@ class Ui_Dialog(object):
         self.suhu_kiri.setItemText(1, _translate("Dialog", "Fahrenheit"))
         self.suhu_kanan.setItemText(0, _translate("Dialog", "Celcius"))
         self.suhu_kanan.setItemText(1, _translate("Dialog", "Fahrenheit"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
+        self.tombol_home.setText(_translate("Dialog", "Home"))

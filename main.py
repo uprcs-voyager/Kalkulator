@@ -14,12 +14,16 @@ class MainDialog(QDialog):
 
 
         self.ui.submitpilihan.clicked.connect(self.navigate_to_page) # Set halaman pertama adalah page_welcome
+        self.ui.tombol_home.clicked.connect(self.go_to_home)
 
     def navigate_to_page (self) :
         selected_option = self.ui.Opsimode.currentText()
 
         if selected_option == "Konversi Suhu" :
             self.ui.stackedWidget.setCurrentIndex(1)
+
+    def go_to_home (self):
+        self.ui.stackedWidget.setCurrentIndex(0)
 
 
 
