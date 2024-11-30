@@ -149,7 +149,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       <string>0</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="nomor_1">
      <property name="geometry">
       <rect>
        <x>1</x>
@@ -164,10 +164,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>1</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="nomor_2">
      <property name="geometry">
       <rect>
        <x>169</x>
@@ -182,10 +182,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>2</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="nomor_3">
      <property name="geometry">
       <rect>
        <x>337</x>
@@ -200,10 +200,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>3</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_5">
+    <widget class="QPushButton" name="nomor_5">
      <property name="geometry">
       <rect>
        <x>168</x>
@@ -218,10 +218,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>5</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_6">
+    <widget class="QPushButton" name="nomor_4">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -236,10 +236,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>4</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_7">
+    <widget class="QPushButton" name="nomor_6">
      <property name="geometry">
       <rect>
        <x>336</x>
@@ -254,10 +254,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>6</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_8">
+    <widget class="QPushButton" name="nomor_9">
      <property name="geometry">
       <rect>
        <x>336</x>
@@ -272,10 +272,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>9</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_9">
+    <widget class="QPushButton" name="nomor_8">
      <property name="geometry">
       <rect>
        <x>168</x>
@@ -290,10 +290,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>8</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_10">
+    <widget class="QPushButton" name="nomor_7">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -308,10 +308,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>7</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_11">
+    <widget class="QPushButton" name="push_c">
      <property name="geometry">
       <rect>
        <x>168</x>
@@ -329,7 +329,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       <string>C</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_12">
+    <widget class="QPushButton" name="push_ac">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -347,7 +347,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       <string>AC</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_13">
+    <widget class="QPushButton" name="push_del">
      <property name="geometry">
       <rect>
        <x>336</x>
@@ -362,16 +362,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       </font>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>Del</string>
      </property>
     </widget>
     <widget class="QFrame" name="frame">
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>240</y>
+       <y>70</y>
        <width>16</width>
-       <height>80</height>
+       <height>71</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -384,13 +384,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       <number>9</number>
      </property>
     </widget>
-    <widget class="QComboBox" name="suhu_kiri">
+    <widget class="QComboBox" name="tipe_konversi">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>240</y>
-       <width>181</width>
-       <height>81</height>
+       <x>80</x>
+       <y>170</y>
+       <width>371</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -408,47 +408,99 @@ border: none;
      </property>
      <item>
       <property name="text">
-       <string>Celcius</string>
+       <string>Fahrenheit  |  Celcius</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Fahrenheit</string>
+       <string>Celcius       |  Fahrenheit</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Celcius       |  Kelvin</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kelvin         |  Celcius</string>
       </property>
      </item>
     </widget>
-    <widget class="QComboBox" name="suhu_kanan">
+    <widget class="QPushButton" name="tombol_home">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>240</y>
-       <width>181</width>
-       <height>81</height>
+       <x>380</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>10</pointsize>
       </font>
      </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
+     <property name="text">
+      <string>Home</string>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QComboBox#suhu_kanan {
-border: none;
-}</string>
+    </widget>
+    <widget class="QLineEdit" name="input_kanan">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>50</y>
+       <width>191</width>
+       <height>101</height>
+      </rect>
      </property>
-     <item>
-      <property name="text">
-       <string>Celcius</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Fahrenheit</string>
-      </property>
-     </item>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="input_kiri">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>191</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="tombol_home_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>250</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Konversi</string>
+     </property>
     </widget>
    </widget>
   </widget>
