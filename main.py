@@ -25,7 +25,16 @@ class MainDialog(QDialog):
     def go_to_home (self):
         self.ui.stackedWidget.setCurrentIndex(0)
 
+# aritmatika page_suhu
+    def konversi_suhu (self, suhu, selected_konversi):
+        if selected_konversi == "Fahrenheit  |  Celcius" :
+            return (suhu*9/5) + 32
 
+# tombol page_suhu
+    def tombol_angka_klik(self, angka):
+        current_text = self.ui.input_kanan.text()
+        new_text = current_text + str(angka)
+        self.ui.input_kanan.setText(new_text)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
