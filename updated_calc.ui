@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page_welcome">
     <property name="styleSheet">
@@ -384,49 +384,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0
       <number>9</number>
      </property>
     </widget>
-    <widget class="QComboBox" name="tipe_konversi">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>170</y>
-       <width>371</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>18</pointsize>
-      </font>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QComboBox#suhu_kiri {
-border: none;
-}</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>Fahrenheit  |  Celcius</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Celcius       |  Fahrenheit</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Celcius       |  Kelvin</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Kelvin         |  Celcius</string>
-      </property>
-     </item>
-    </widget>
     <widget class="QPushButton" name="tombol_home">
      <property name="geometry">
       <rect>
@@ -463,7 +420,7 @@ border: none;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="input_kiri">
+    <widget class="QLineEdit" name="output_kiri">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -488,7 +445,7 @@ border: none;
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>250</y>
+       <y>270</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -501,6 +458,66 @@ border: none;
      <property name="text">
       <string>Konversi</string>
      </property>
+    </widget>
+    <widget class="QComboBox" name="combo_input">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>180</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>Celcius</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Fahrenheit</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kelvin</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="combo_output">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>Celcius</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Fahrenheit</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kelvin</string>
+      </property>
+     </item>
     </widget>
    </widget>
   </widget>
