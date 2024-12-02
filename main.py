@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QMainWindow
 from PyQt5 import QtWidgets, uic
 from updated_calc import Ui_Dialog
 
+
 class MainDialog(QDialog):
     def __init__(self):
         super().__init__()
@@ -16,6 +17,11 @@ class MainDialog(QDialog):
         self.tombol_home.clicked.connect(self.go_to_home)
         self.tombol_konversi.clicked.connect(self.konversi_suhu)
 
+        self.tombolsuhu() #dipake di page_suhu
+        self.push_ac.clicked.connect(self.clear_all)
+        self.push_c.clicked.connect(self.clear)
+        self.push_del.clicked.connect(self.delete)
+
     def navigate_to_page(self):
         selected_option = self.Opsimode.currentText()
         if selected_option == "Konversi Suhu":
@@ -26,11 +32,42 @@ class MainDialog(QDialog):
 
 
 
+
     # ///////////////////////////////halaman suhu////////////////////////////////////
+    def tombolsuhu(self):
+
+        self.nomor_0.clicked.connect(lambda: self.masukin_input("0"))
+        self.nomor_1.clicked.connect(lambda: self.masukin_input("1"))
+        self.nomor_2.clicked.connect(lambda: self.masukin_input("2"))
+        self.nomor_3.clicked.connect(lambda: self.masukin_input("3"))
+        self.nomor_4.clicked.connect(lambda: self.masukin_input("4"))
+        self.nomor_5.clicked.connect(lambda: self.masukin_input("5"))
+        self.nomor_6.clicked.connect(lambda: self.masukin_input("6"))
+        self.nomor_7.clicked.connect(lambda: self.masukin_input("7"))
+        self.nomor_8.clicked.connect(lambda: self.masukin_input("8"))
+        self.nomor_9.clicked.connect(lambda: self.masukin_input("9"))
+
+    def clear_all(self):
+        self.InputKanan.clear()
+        self.output_kiri.clear()
+       
+
+    def clear(self):
+        self.InputKanan.setText("")
+
+    def delete(self):
+        current_text = self.InputKanan.text()
+        self.InputKanan.setText(current_text[:-1])
+
+    def masukin_input(self, value):
+        current_text = self.InputKanan.text()
+        self.InputKanan.setText(current_text + value)
+
+
     def konversi_suhu(self):
         try:
             # ambil info value
-            value = float(self.input_kanan.text())
+            value = float(self.InputKanan.text())
             dari_satuan = self.combo_input.currentText()
             ke_satuan = self.combo_output.currentText()
 
