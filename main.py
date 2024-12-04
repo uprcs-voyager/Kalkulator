@@ -6,6 +6,7 @@ from PyQt5 import QtWidgets, uic
 from updated_calc import Ui_Dialog
 
 
+
 class MainDialog(QDialog):
     def __init__(self):
         super().__init__()
@@ -16,6 +17,7 @@ class MainDialog(QDialog):
         self.submitpilihan.clicked.connect(self.navigate_to_page)
         self.tombol_home.clicked.connect(self.go_to_home)
         self.tombol_homep.clicked.connect(self.go_to_home)
+        self.tombol_homeD.clicked.connect(self.go_to_home)
         self.tombol_konversi_suhu.clicked.connect(self.konversi_suhu)
 
 
@@ -28,6 +30,16 @@ class MainDialog(QDialog):
 
         self.tombol_panjang() #dipake di page_panjang
         self.convert_button_panjang.clicked.connect(self.konversi_panjang)
+        self.p_ac.clicked.connect(self.clear_allP)
+        self.p_c.clicked.connect(self.clearP)
+        self.p_del.clicked.connect(self.deleteP)
+
+        self.tombol_digital() #dipake di page_datadigital
+        self.convert_button_Digital.clicked.connect(self.konversi_data_digital)
+        self.acD.clicked.connect(self.clear_allD)
+        self.cD.clicked.connect(self.delete_lastD)
+        self.deletD.clicked.connect(self.clear_lastD)
+
 
 
     def navigate_to_page(self):
@@ -36,6 +48,9 @@ class MainDialog(QDialog):
             self.stackedWidget.setCurrentIndex(1)  # ke halaman suhu
         if selected_option == "Konversi Panjang":
             self.stackedWidget.setCurrentIndex(2) #ke halaman panjang
+        if selected_option == "Konversi Data Digital":
+            self.stackedWidget.setCurrentIndex(3) #ke halaman panjang
+
     def go_to_home(self):
         self.stackedWidget.setCurrentIndex(0)  # kembali ke halaman rumah
 
@@ -120,6 +135,15 @@ class MainDialog(QDialog):
         current_text = self.input_lineedit.text()
         self.input_lineedit.setText(current_text + value)
 
+    def clear_allP(self):
+        self.input_lineedit.clear()
+        self.output_lineedit.clear()
+    def clearP(self):
+        self.input_lineedit.setText("")
+    def deleteP(self):
+        current_text = self.input_lineedit.text()
+        self.input_lineedit.setText(current_text[:-1])
+
     def konversi_panjang (self) :
         try:
             value = float(self.input_lineedit.text())
@@ -147,25 +171,84 @@ class MainDialog(QDialog):
 
             # Convert from meters to the output unit
             converted_value = value_in_meters / conversion_factors[output_unit]
-            self.output_lineedit.setText(str(round(converted_value, 3)))
+            self.output_lineedit.setText(str(converted_value))
         except ValueError:
             self.output_lineedit.setText("Invalid input")  # Handle invalid input
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # //////////////////////////////////halaman panjang/////////////////////////////////////////////////////////
 
+
+
+
+
+# ////////////////////////////////halaman konversi data digital//////////////////////////////////
+    def tombol_digital(self):
+        self.nomorD_0.clicked.connect(lambda: self.masukin_inputD("0"))
+        self.nomorD_1.clicked.connect(lambda: self.masukin_inputD("1"))
+        self.nomorD_2.clicked.connect(lambda: self.masukin_inputD("2"))
+        self.nomorD_3.clicked.connect(lambda: self.masukin_inputD("3"))
+        self.nomorD_4.clicked.connect(lambda: self.masukin_inputD("4"))
+        self.nomorD_5.clicked.connect(lambda: self.masukin_inputD("5"))
+        self.nomorD_6.clicked.connect(lambda: self.masukin_inputD("6"))
+        self.nomorD_7.clicked.connect(lambda: self.masukin_inputD("7"))
+        self.nomorD_8.clicked.connect(lambda: self.masukin_inputD("8"))
+        self.nomorD_9.clicked.connect(lambda: self.masukin_inputD("9"))
+
+    def masukin_inputD(self, value):
+        current_text = self.input_lineeditD.text()
+        self.input_lineeditD.setText(current_text + value)
+
+    def clear_allD(self):
+        self.input_lineeditD.clear()
+        self.output_lineeditD.clear()
+    def clear_lastD(self):
+        current_text = self.input_lineeditD.text()
+        self.input_lineeditD.setText(current_text[:-1])
+    def delete_lastD(self):
+        self.input_lineeditD.setText("")
+
+    def konversi_data_digital(self):
+        try:
+            value = float(self.input_lineeditD.text())
+            input_unit = self.input_data_comboboxD.currentText()
+            output_unit = self.output_data_comboboxD.currentText()
+
+            # Conversion factors for digital data
+            conversion_factors = {
+                'b': 1,  # bit
+                'B': 8,  # byte 'Kib': 1024,  # kibibit
+                'kb': 1000,  # kilobit
+                'Kib': 1024,  # kibibit
+                'KiB': 1024 * 8,  # kibibyte
+                'kB': 1000 * 8,  # kilobyte
+                'Mib': 1024 * 1024,  # mebibit
+                'Mb': 1000 * 1000,  # megabit
+                'MiB': 1024 * 1024 * 8,  # mebibyte
+                'MB': 1000 * 1000 * 8,  # megabyte
+                'Gib': 1024 * 1024 * 1024,  # gibibit
+                'Gb': 1000 * 1000 * 1000,  # gigabit
+                'GiB': 1024 * 1024 * 1024 * 8,  # gibibyte
+                'GB': 1000 * 1000 * 1000 * 8,  # gigabyte
+                'Tib': 1024 * 1024 * 1024 * 1024,  # tebibit
+                'Tb': 1000 * 1000 * 1000 * 1000,  # terabit
+                'TiB': 1024 * 1024 * 1024 * 1024 * 8,  # tebibyte
+                'TB': 1000 * 1000 * 1000 * 1000 * 8,  # terabyte
+                'Pib': 1024 * 1024 * 1024 * 1024 * 1024,  # pebibit
+                'Pb': 1000 * 1000 * 1000 * 1000 * 1000,  # petabit
+                'PiB': 1024 * 1024 * 1024 * 1024 * 1024 * 8,  # pebibyte
+                'PB': 1000 * 1000 * 1000 * 1000 * 1000 * 8,  # petabyte
+            }
+
+            # Convert to bits
+            value_in_bits = value * conversion_factors[input_unit]
+
+            # Convert from bits to the output unit
+            converted_value = value_in_bits / conversion_factors[output_unit]
+            self.output_lineeditD.setText(str(converted_value))
+        except ValueError:
+            self.output_lineeditD.setText("Invalid input")  # Handle invalid input
+
+# /////////////////////////////////////////// halaman konversi data digital /////////////////////////////////////////////////////////////
+        
 
 
 
