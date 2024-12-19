@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>559</width>
+    <height>676</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="bgwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>561</width>
+     <height>681</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#bgwidget{
+background-color: qlineargradient(spread:pad, x1:0, y1:0.102, x2:1, y2:1, stop:0 rgba(205, 165, 255, 255), stop:0.675393 rgba(156, 229, 219, 255), stop:1 rgba(255, 255, 255, 255));}</string>
+   </property>
+   <widget class="QLabel" name="welcome">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>110</y>
+      <width>391</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 63 30pt &quot;Bahnschrift SemiBold&quot;; color:rgb(31, 86, 146)</string>
+    </property>
+    <property name="text">
+     <string>Selamat Datang</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="welcome2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>170</y>
+      <width>321</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 63 14pt &quot;Bahnschrift SemiBold&quot;; color:rgb(31, 86, 146)</string>
+    </property>
+    <property name="text">
+     <string>Silahkan pilih mode kalkulator</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Opsimode">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>330</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <item>
+     <property name="text">
+      <string>Kalkulator sederhana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Konversi Suhu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Konversi Panjang</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Konversi Massa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Konversi Waktu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Konversi kecepatan</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="submitpilihan">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>430</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pilih</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>561</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_konversisuhu">
+     <widget class="QPushButton" name="number_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>620</y>
+        <width>561</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>550</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_3">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>550</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_4">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>550</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_5">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>480</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_6">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>480</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>480</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_8">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>410</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_9">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>410</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>410</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_11">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>340</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Del</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>AC</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="number_13">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>340</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>C</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>277</x>
+        <y>240</y>
+        <width>16</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::VLine</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>9</number>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="suhu_kiri">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>240</y>
+        <width>251</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">style : none;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Celcius</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fahrenheit</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="suhu_kanan">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>240</y>
+        <width>251</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Celcius</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fahrenheit</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_6"/>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
